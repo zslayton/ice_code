@@ -16,7 +16,7 @@ macro_rules! ice {
     {
         // Closures that are passed in argument position are allowed to have annotations for
         // obscure historical reasons.
-      let closure = core::convert::identity(#[cold] #[inline(never)] || $expr);
+      let mut closure = core::convert::identity(#[cold] #[inline(never)] || $expr);
       closure()
     }
   };

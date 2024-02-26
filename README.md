@@ -6,7 +6,7 @@ _Alright alright alright alright alright alright alright alright_
 
 ## What is this?
 
-`ice_code` provides the `ice!` macro, which labels a given block of Rust code as a
+This crate provides the `ice!` macro, which labels a given block of Rust code as a
 "cold path" in the application--one that is rarely executed. This information allows the
 compiler to prioritize optimizing the other code paths, leading to better method inlining
 behavior and boosting performance in the common case.
