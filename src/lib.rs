@@ -5,7 +5,7 @@ macro_rules! ice {
       // ...define a named function whose definition will never be inlined...
     #[cold]
     #[inline(never)]
-    fn $label<T, F: Fn() -> T>(f: F) -> T {
+    fn $label<T, F: FnOnce() -> T>(f: F) -> T {
         f()
     }
       // ...and then wrap our `expr` in a closure and pass it to the function.
