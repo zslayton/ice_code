@@ -2,6 +2,13 @@
 name = "ice_code"
 version = "0.1.0"
 edition = "2021"
+authors = ["zack.slayton@gmail.com"]
+license = "Apache-2.0"
+keywords = ["optimize", "optimization", "inline", "inlining", "cold"]
+description = "A macro to mark code paths as cold, allowing the common case to be inlined."
+homepage = "https://github.com/zslayton/ice_code"
+repository = "https://github.com/zslayton/ice_code"
+documentation = "https://docs.rs/ice_code"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
