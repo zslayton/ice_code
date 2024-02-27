@@ -1,6 +1,6 @@
 _What's cooler than being cool?_
 
-# 🧊 Ice Code 🧊
+# 🧊 Ice Code 🧊 [![](https://docs.rs/ice_code/badge.svg)](https://docs.rs/ice_code/) [![](https://img.shields.io/crates/v/ice_code.svg)](https://crates.io/crates/ice_code)
 
 _Alright alright alright alright alright alright alright alright_ 
 
@@ -11,9 +11,7 @@ This crate provides the `ice!` macro, which labels a given block of Rust code as
 compiler to prioritize optimizing the other code paths, leading to better method inlining
 behavior and boosting performance in the common case.
 
-## Usage
-
-### Source
+## Example
 Here's an example method that branches into two paths:
 1. The common case, where the argument it receives is exactly what it's expecting.
 2. The error handling branch, where the validation logic rejects the argument.
@@ -56,11 +54,11 @@ somewhere else and is hidden behind a `call` instruction.
 ### Labeled cold code
 
 If you use multiple `ice!` invocations in the same method, the mangled anonymous names produced
-by the compiler may be difficult for humans to disambiguate. You can add a label to the generated
-assembly by using this syntax:
+by the compiler may be difficult for humans to tell apart in the resulting assembly. You can add
+a label to the generated assembly by using this syntax:
 
 ```rust
-cold! {
+ice! {
     // label          expression
     error_handler => Err(format!("..."))
 }
